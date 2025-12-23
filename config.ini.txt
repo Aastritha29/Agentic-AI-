@@ -1,0 +1,22 @@
+
+[ssh_server]
+hostname = 192.168.6.175
+port = 22
+username = inv-6
+password = invences123
+
+[capture]
+interface = br0
+packet_count = 200
+remote_pcap_path = /home/inv-6/remote_capture.pcap
+local_pcap_dir = ./captures
+interval_seconds = 60
+ml_contamination = 0.05
+anomaly_detector_script_path = anomaly_detector.py
+# This line points to your script in the main project folder
+deep_scan_script_path = /home/inv-6/packet_monitorning/captures/deep_anomaly_scan.sh
+
+[prometheus]
+exporter_port = 8000
+
+
